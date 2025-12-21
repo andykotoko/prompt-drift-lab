@@ -1,9 +1,0 @@
-question,prompt_version,score,violations
-Q1,prompt1,3,"事实段过长;搜索段术语错误;段落混合"
-Q1,prompt2,8,""
-Q2,prompt1,4,"事实段含建议;结构不稳"
-Q2,prompt2,8,""
-Q3,prompt1,5,"解释侵入事实段"
-Q3,prompt2,8,""
-Q4,prompt1,5,"结构边界模糊"
-Q4,prompt2,8,""
