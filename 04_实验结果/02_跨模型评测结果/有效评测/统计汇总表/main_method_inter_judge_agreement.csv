@@ -1,0 +1,4 @@
+﻿judge_a,judge_b,n,mae_total,exact_match
+chatgpt,claude,16,1.0625,7
+chatgpt,gemini,16,0.125,14
+claude,gemini,16,1.25,6

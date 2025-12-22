@@ -1,0 +1,13 @@
+﻿generator,version,avg_total
+chatgpt,baseline,6.125
+chatgpt,conflict,9.625
+chatgpt,long,9.375
+chatgpt,weak,9.125
+claude,baseline,2.125
+claude,conflict,2.25
+claude,long,2.125
+claude,weak,2.25
+gemini,baseline,5.375
+gemini,conflict,4.75
+gemini,long,4.75
+gemini,weak,4.75

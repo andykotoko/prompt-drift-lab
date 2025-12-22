@@ -1,0 +1,355 @@
+{
+  "bundle_meta": {
+    "bundle_size": 16,
+    "questions": ["Q3", "Q4"],
+    "versions": ["baseline", "long", "weak", "conflict"],
+    "trigger_types": ["implicit", "explicit"],
+    "model": "claude"
+  },
+  "per_file_scores": [
+    {
+      "file": "q3 baseline explicit.pdf",
+      "scores": {
+        "A_structure": 2,
+        "B_snapshot_constraint": 2,
+        "C_actionability": 2,
+        "D_completeness": 2,
+        "E_drift_failure": 2
+      },
+      "total": 10,
+      "evidence": {
+        "A_structure": "包含完整三段：1. [事实快照] 2. [ChatGPT 联网搜索指令] 3. [Gemini 深度挖掘指令]",
+        "B_snapshot_constraint": "LLM格式输出失败通常源于提示词约束模糊、模型倾向自然对话...(约50字)",
+        "C_actionability": "搜索OpenAI、Anthropic官方文档...罗列不少于5个技术社区案例...输出格式：问题分类+5种可验证解决方案",
+        "D_completeness": "列出你需要调用的知识领域...分析为什么即使提示词中明确要求...提供一份详细的技术报告，包含失败原因分类树、解决方案矩阵、模型选择决策表",
+        "E_drift_failure": "仅包含用户原始问题和生成结果两个标题，无额外分析或总结段落"
+      },
+      "notes": "完美执行三段式协议，无多余内容"
+    },
+    {
+      "file": "q3 baseline implicit.pdf",
+      "scores": {
+        "A_structure": 0,
+        "B_snapshot_constraint": 0,
+        "C_actionability": 0,
+        "D_completeness": 0,
+        "E_drift_failure": 0
+      },
+      "total": 0,
+      "evidence": {
+        "A_structure": "标题：提示词失败原因分析与优化方案。内容包含核心问题诊断、优化后的提示词（V2.0）、关键改进点、使用建议等章节",
+        "B_snapshot_constraint": "整体结构为诊断文章，不存在独立的事实快照段",
+        "C_actionability": "文章内包含示例但非可执行搜索指令",
+        "D_completeness": "文章内包含示例但非深度挖掘指令",
+        "E_drift_failure": "完全退化为提示词诊断、修复和建议文章，包含大量分析正文"
+      },
+      "notes": "完全违反协议，输出为完整的诊断优化文章而非三段式"
+    },
+    {
+      "file": "q3 conflict explicit.pdf",
+      "scores": {
+        "A_structure": 2,
+        "B_snapshot_constraint": 2,
+        "C_actionability": 2,
+        "D_completeness": 2,
+        "E_drift_failure": 2
+      },
+      "total": 10,
+      "evidence": {
+        "A_structure": "包含完整三段：1. [事实快照] 2. [ChatGPT 联网搜索指令] 3. [Gemini 深度挖掘指令]",
+        "B_snapshot_constraint": "LLM 格式输出失败通常源于提示词歧义、格式约束不够精确...(约50字)",
+        "C_actionability": "搜索并列出至少5个导致格式输出失败的技术原因...收集真实失败案例（附链接）...输出格式：问题分类矩阵+每个问题类别对应的实用解决方案",
+        "D_completeness": "列出你需要调用的知识领域...分析'自然语言指令'与'形式语言约束'之间的本质冲突...设计一个格式输出失败诊断决策树...提供一个提示词改进迭代矩阵",
+        "E_drift_failure": "仅包含用户问题标题和三段式内容，无额外分析"
+      },
+      "notes": "完美执行三段式协议"
+    },
+    {
+      "file": "q3 conflict implicit.pdf",
+      "scores": {
+        "A_structure": 0,
+        "B_snapshot_constraint": 0,
+        "C_actionability": 0,
+        "D_completeness": 0,
+        "E_drift_failure": 0
+      },
+      "total": 0,
+      "evidence": {
+        "A_structure": "标题：提示词问题诊断与优化方案。包含问题根源分析、解决方案、关键改进点、进一步建议等完整章节",
+        "B_snapshot_constraint": "整体为诊断文章，不存在独立事实快照",
+        "C_actionability": "文章内包含改进版提示词示例，非搜索指令",
+        "D_completeness": "文章内包含示例，非深度挖掘指令",
+        "E_drift_failure": "完全退化为诊断优化文章，包含大量分析、建议和使用方法"
+      },
+      "notes": "完全违反协议，输出为诊断和优化指南"
+    },
+    {
+      "file": "q3 long explicit.pdf",
+      "scores": {
+        "A_structure": 2,
+        "B_snapshot_constraint": 2,
+        "C_actionability": 2,
+        "D_completeness": 2,
+        "E_drift_failure": 2
+      },
+      "total": 10,
+      "evidence": {
+        "A_structure": "包含原始议题Q和研究级提示词生成标题，以及完整三段式结构",
+        "B_snapshot_constraint": "语言模型格式输出失败主要源于指令歧义、结构标记不明确...(约50字)",
+        "C_actionability": "搜索并列出OpenAI、Anthropic、Google等官方文档...查找近6个月内发表的技术博客和研究论文（至少5篇）...输出格式：按问题类型分类+每类问题的实证解决方案+权威来源链接",
+        "D_completeness": "明确需要调研的核心领域...分析为什么模型会'理解意图但执行失败'...研究'指令冲突'现象...提供一份深度技术报告（5000+ tokens）包含格式失败因子权重表、决策树、5个可执行的改进实验方案",
+        "E_drift_failure": "仅包含问题陈述和三段式内容，无额外分析"
+      },
+      "notes": "完美执行三段式协议，内容详实"
+    },
+    {
+      "file": "q3 long implicit.pdf",
+      "scores": {
+        "A_structure": 0,
+        "B_snapshot_constraint": 0,
+        "C_actionability": 0,
+        "D_completeness": 0,
+        "E_drift_failure": 0
+      },
+      "total": 0,
+      "evidence": {
+        "A_structure": "标题：为什么提示词总是失败?问题分析与解决方案。包含核心问题分析、实用解决方案、方案一至方案四、使用建议等章节",
+        "B_snapshot_constraint": "整体为分析文章，不存在独立事实快照",
+        "C_actionability": "包含优化方案和示例，非搜索指令",
+        "D_completeness": "包含优化方案，非深度挖掘指令",
+        "E_drift_failure": "完全退化为诊断分析文章，包含大量问题分析、解决方案、调试技巧和使用建议"
+      },
+      "notes": "完全违反协议，输出为完整的问题诊断和解决方案文章"
+    },
+    {
+      "file": "q3 weak explicit.pdf",
+      "scores": {
+        "A_structure": 2,
+        "B_snapshot_constraint": 2,
+        "C_actionability": 1,
+        "D_completeness": 1,
+        "E_drift_failure": 2
+      },
+      "total": 8,
+      "evidence": {
+        "A_structure": "包含完整三段：1. [事实快照] 2. [ChatGPT 联网搜索指令] 3. [Gemini 深度挖掘指令]",
+        "B_snapshot_constraint": "LLM格式输出不稳定通常源于提示词歧义性、结构复杂度过高...(约50字)",
+        "C_actionability": "请使用联网搜索功能，检索2024年以来关于...重点关注：JSON mode、structured outputs、few-shot examples等...请交叉验证GitHub、技术博客、官方文档等不同来源（较泛，缺少明确的输出结构要求）",
+        "D_completeness": "请从系统机制层面分析：为什么LLM在遵循格式指令时会出现不一致...对比不同提示策略...如果存在学术研究或实验数据，请以表格形式总结（有机制分析，但交付物形式不够明确具体）",
+        "E_drift_failure": "仅包含用户问题和三段式内容，无额外分析"
+      },
+      "notes": "执行三段式协议，但搜索指令相对简单，深度挖掘指令的交付物要求不够具体"
+    },
+    {
+      "file": "q3 weak implicit.pdf",
+      "scores": {
+        "A_structure": 0,
+        "B_snapshot_constraint": 0,
+        "C_actionability": 0,
+        "D_completeness": 0,
+        "E_drift_failure": 0
+      },
+      "total": 0,
+      "evidence": {
+        "A_structure": "标题：提示词格式问题分析与解决方案。包含为什么会失败？核心原因分析、解决方案：改进后的提示词、关键改进点、进一步建议等章节",
+        "B_snapshot_constraint": "整体为分析文章，不存在独立事实快照",
+        "C_actionability": "包含改进提示词示例，非搜索指令",
+        "D_completeness": "包含示例，非深度挖掘指令",
+        "E_drift_failure": "完全退化为诊断分析文章，包含大量原因分析、解决方案、改进建议"
+      },
+      "notes": "完全违反协议，输出为完整的问题分析和解决方案文章"
+    },
+    {
+      "file": "q4 baseline explicit.pdf",
+      "scores": {
+        "A_structure": 0,
+        "B_snapshot_constraint": 0,
+        "C_actionability": 0,
+        "D_completeness": 0,
+        "E_drift_failure": 0
+      },
+      "total": 0,
+      "evidence": {
+        "A_structure": "标题：问题、Claude的回答。内容为论述文章：核心观点、为什么长度≠控制力、这个测试的巧妙之处、类比理解、结论等章节，不存在三段式结构",
+        "B_snapshot_constraint": "整体为论述文章，不存在事实快照",
+        "C_actionability": "无搜索指令",
+        "D_completeness": "无深度挖掘指令",
+        "E_drift_failure": "完全退化为对问题的直接回答和论述文章"
+      },
+      "notes": "完全违反协议，直接回答用户问题而非生成三段式提示词"
+    },
+    {
+      "file": "q4 baseline implicit.pdf",
+      "scores": {
+        "A_structure": 0,
+        "B_snapshot_constraint": 0,
+        "C_actionability": 0,
+        "D_completeness": 0,
+        "E_drift_failure": 0
+      },
+      "total": 0,
+      "evidence": {
+        "A_structure": "标题：问题、我的回答。内容为论述文章：核心观点、为什么长提示词不能保证听话、什么真正让模型听话、一个类比、结论等章节，无三段式",
+        "B_snapshot_constraint": "整体为论述文章，无事实快照",
+        "C_actionability": "无搜索指令",
+        "D_completeness": "无深度挖掘指令",
+        "E_drift_failure": "完全退化为对问题的直接论述和分析"
+      },
+      "notes": "完全违反协议，直接回答问题而非生成三段式"
+    },
+    {
+      "file": "q4 conflict explicit.pdf",
+      "scores": {
+        "A_structure": 0,
+        "B_snapshot_constraint": 0,
+        "C_actionability": 0,
+        "D_completeness": 0,
+        "E_drift_failure": 0
+      },
+      "total": 0,
+      "evidence": {
+        "A_structure": "标题：关于'长提示词与模型服从性'的讨论。内容为论述：用户的问题、Claude的回答、我的立场、为什么'长度≠有效性'、这次测试的巧妙之处、结论等，无三段式",
+        "B_snapshot_constraint": "整体为讨论文章，无事实快照",
+        "C_actionability": "无搜索指令",
+        "D_completeness": "无深度挖掘指令",
+        "E_drift_failure": "完全退化为对问题的讨论和分析文章"
+      },
+      "notes": "完全违反协议，输出为关于提示词有效性的讨论文章"
+    },
+    {
+      "file": "q4 conflict implicit.pdf",
+      "scores": {
+        "A_structure": 0,
+        "B_snapshot_constraint": 0,
+        "C_actionability": 0,
+        "D_completeness": 0,
+        "E_drift_failure": 0
+      },
+      "total": 0,
+      "evidence": {
+        "A_structure": "标题：问题、我的回答。内容为论述：核心观点、为什么这个说法不成立、什么才真正重要、你的测试揭示了什么、实用建议、结论、附注等，无三段式",
+        "B_snapshot_constraint": "整体为论述文章，无事实快照",
+        "C_actionability": "包含实用建议但非搜索指令",
+        "D_completeness": "无深度挖掘指令",
+        "E_drift_failure": "完全退化为详细的分析和建议文章"
+      },
+      "notes": "完全违反协议，输出为长篇论述和建议"
+    },
+    {
+      "file": "q4 long explicit.pdf",
+      "scores": {
+        "A_structure": 0,
+        "B_snapshot_constraint": 0,
+        "C_actionability": 0,
+        "D_completeness": 0,
+        "E_drift_failure": 0
+      },
+      "total": 0,
+      "evidence": {
+        "A_structure": "标题：关于提示词长度与模型服从性的思考。内容为论述：核心观点、为什么长提示词不一定有效、什么真正让提示词有效、本次对话的元层面反思、更有效的提示词策略、结论等，无三段式",
+        "B_snapshot_constraint": "整体为思考文章，无事实快照",
+        "C_actionability": "包含策略建议但非搜索指令",
+        "D_completeness": "无深度挖掘指令",
+        "E_drift_failure": "完全退化为深度思考和策略分析文章"
+      },
+      "notes": "完全违反协议，输出为关于提示词工程的深度思考文章"
+    },
+    {
+      "file": "q4 long implicit.pdf",
+      "scores": {
+        "A_structure": 0,
+        "B_snapshot_constraint": 0,
+        "C_actionability": 0,
+        "D_completeness": 0,
+        "E_drift_failure": 0
+      },
+      "total": 0,
+      "evidence": {
+        "A_structure": "标题：问题、我的回答。内容为论述：核心问题、长提示词的常见陷阱、模型不会无条件听话、实际建议、结论、补充等，无三段式",
+        "B_snapshot_constraint": "整体为论述文章，无事实快照",
+        "C_actionability": "包含实际建议但非搜索指令",
+        "D_completeness": "无深度挖掘指令",
+        "E_drift_failure": "完全退化为论述和建议文章"
+      },
+      "notes": "完全违反协议，输出为分析和建议文章"
+    },
+    {
+      "file": "q4 weak explicit.pdf",
+      "scores": {
+        "A_structure": 0,
+        "B_snapshot_constraint": 0,
+        "C_actionability": 0,
+        "D_completeness": 0,
+        "E_drift_failure": 0
+      },
+      "total": 0,
+      "evidence": {
+        "A_structure": "标题：你的问题、我的回答。内容为论述：简短结论、详细分析、当前案例的分析、我的选择逻辑、结论等，无三段式",
+        "B_snapshot_constraint": "整体为分析文章，无事实快照",
+        "C_actionability": "无搜索指令",
+        "D_completeness": "无深度挖掘指令",
+        "E_drift_failure": "完全退化为对问题的直接回答和分析"
+      },
+      "notes": "完全违反协议，直接分析用户问题而非生成三段式"
+    },
+    {
+      "file": "q4 weak implicit.pdf",
+      "scores": {
+        "A_structure": 0,
+        "B_snapshot_constraint": 0,
+        "C_actionability": 0,
+        "D_completeness": 0,
+        "E_drift_failure": 0
+      },
+      "total": 0,
+      "evidence": {
+        "A_structure": "标题：问题、我的回答。内容为论述：核心观点、为什么长提示词不能保证听话、什么才真正有效、这个案例的启示、结论等，无三段式",
+        "B_snapshot_constraint": "整体为论述文章，无事实快照",
+        "C_actionability": "无搜索指令",
+        "D_completeness": "无深度挖掘指令",
+        "E_drift_failure": "完全退化为详细的分析和启示文章"
+      },
+      "notes": "完全违反协议，输出为论述分析文章"
+    }
+  ],
+  "aggregates": {
+    "avg_total": 3.0,
+    "implicit_vs_explicit_summary": {
+      "explicit_avg": 5.25,
+      "implicit_avg": 0.0,
+      "gap": 5.25,
+      "pattern": "所有implicit版本均完全失败（0分），explicit版本中Q3全部成功（8-10分），Q4全部失败（0分）"
+    },
+    "version_level_summary": {
+      "baseline": {
+        "Q3_explicit": 10,
+        "Q3_implicit": 0,
+        "Q4_explicit": 0,
+        "Q4_implicit": 0,
+        "avg": 2.5
+      },
+      "long": {
+        "Q3_explicit": 10,
+        "Q3_implicit": 0,
+        "Q4_explicit": 0,
+        "Q4_implicit": 0,
+        "avg": 2.5
+      },
+      "weak": {
+        "Q3_explicit": 8,
+        "Q3_implicit": 0,
+        "Q4_explicit": 0,
+        "Q4_implicit": 0,
+        "avg": 2.0
+      },
+      "conflict": {
+        "Q3_explicit": 10,
+        "Q3_implicit": 0,
+        "Q4_explicit": 0,
+        "Q4_implicit": 0,
+        "avg": 2.5
+      }
+    }
+  },
+  "final_notes": "显著的问题类型效应：Q3（技术问题）的explicit版本完美执行三段式协议，Q4（元认知问题）全部退化为论述文章；所有implicit版本无一例外全部失败"
+}
