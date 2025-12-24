@@ -1,5 +1,3 @@
-# README.md (EN)
-
 # Prompt Drift Lab
 *A reproducible, artifact-first evaluation framework for instruction-following stability (prompt drift) under controlled prompt variants.*
 
