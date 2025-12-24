@@ -1,0 +1,341 @@
+{
+  "bundle_meta": {
+    "bundle_size": 16,
+    "questions": [
+      "Q3",
+      "Q4"
+    ],
+    "versions": [
+      "baseline",
+      "long",
+      "weak",
+      "conflict"
+    ],
+    "trigger_types": [
+      "implicit",
+      "explicit"
+    ],
+    "model": "Gemini"
+  },
+  "per_file_scores": [
+    {
+      "file": "q3 baseline implicit.pdf",
+      "scores": {
+        "A_structure": 0,
+        "B_snapshot_constraint": 0,
+        "C_actionability": 0,
+        "D_completeness": 0,
+        "E_drift_failure": 0
+      },
+      "total": 0,
+      "evidence": {
+        "A_structure": "1. 用户遇到的问题... 2. 为什么会失败?...",
+        "B_snapshot_constraint": "N/A (Structure missing)",
+        "C_actionability": "N/A (Structure missing)",
+        "D_completeness": "N/A (Structure missing)",
+        "E_drift_failure": "Full meta-analysis text instead of output."
+      },
+      "notes": "Failed to enter Role; generated a diagnostic report instead."
+    },
+    {
+      "file": "q3 baseline explicit.pdf",
+      "scores": {
+        "A_structure": 2,
+        "B_snapshot_constraint": 0,
+        "C_actionability": 2,
+        "D_completeness": 2,
+        "E_drift_failure": 1
+      },
+      "total": 7,
+      "evidence": {
+        "A_structure": "1. [事实快照]... 2. [ChatGPT 联网搜索指令]...",
+        "B_snapshot_constraint": "大语言模型(LLM)的格式遵循失败主要源于... (Contains analysis '源于', >50 chars)",
+        "C_actionability": "强制搜索...查找并引用...罗列不少于5个...",
+        "D_completeness": "研究计划...机制深挖...冲突点分析...",
+        "E_drift_failure": "附录:故障诊断与分析(针对你的困惑)... (Unauthorized addendum)"
+      },
+      "notes": "Good structure but appended unauthorized diagnostic appendix."
+    },
+    {
+      "file": "q3 weak implicit.pdf",
+      "scores": {
+        "A_structure": 0,
+        "B_snapshot_constraint": 0,
+        "C_actionability": 0,
+        "D_completeness": 0,
+        "E_drift_failure": 0
+      },
+      "total": 0,
+      "evidence": {
+        "A_structure": "提示词失效原因分析与优化报告... 第二部分:为什么原来的提示词会失败?...",
+        "B_snapshot_constraint": "N/A",
+        "C_actionability": "N/A",
+        "D_completeness": "N/A",
+        "E_drift_failure": "Generated a report analyzing the prompt rather than executing it."
+      },
+      "notes": "Model analyzed the prompt instead of adopting the persona."
+    },
+    {
+      "file": "q3 weak explicit.pdf",
+      "scores": {
+        "A_structure": 2,
+        "B_snapshot_constraint": 0,
+        "C_actionability": 2,
+        "D_completeness": 2,
+        "E_drift_failure": 2
+      },
+      "total": 8,
+      "evidence": {
+        "A_structure": "1. 【事实快照】... 2. [ChatGPT 联网搜索指令]...",
+        "B_snapshot_constraint": "大语言模型(LLM)本质是...极易发生'指令遵循'降级... (Definition/Analysis, not snapshot)",
+        "C_actionability": "请重点搜集...检索2023-2024年...寻找社区验证过的...",
+        "D_completeness": "RLHF的双刃剑效应...概率与确定性的冲突...",
+        "E_drift_failure": "Clean end."
+      },
+      "notes": "Solid structure, but Snapshot failed constraint (too long/analytical)."
+    },
+    {
+      "file": "q3 long implicit.pdf",
+      "scores": {
+        "A_structure": 0,
+        "B_snapshot_constraint": 0,
+        "C_actionability": 0,
+        "D_completeness": 0,
+        "E_drift_failure": 0
+      },
+      "total": 0,
+      "evidence": {
+        "A_structure": "提示词失效分析与优化方案... 1. 问题背景...",
+        "B_snapshot_constraint": "N/A",
+        "C_actionability": "N/A",
+        "D_completeness": "N/A",
+        "E_drift_failure": "Meta-analysis output."
+      },
+      "notes": "Failed to execute; outputted an optimization plan."
+    },
+    {
+      "file": "q3 long explicit.pdf",
+      "scores": {
+        "A_structure": 2,
+        "B_snapshot_constraint": 0,
+        "C_actionability": 2,
+        "D_completeness": 2,
+        "E_drift_failure": 2
+      },
+      "total": 8,
+      "evidence": {
+        "A_structure": "1. [事实快照】... 2. [ChatGPT 联网搜索指令]...",
+        "B_snapshot_constraint": "大语言模型无法严格遵循格式输出通常归因于... (Causal analysis '归因于', >50 chars)",
+        "C_actionability": "搜索并引用...查找...交叉验证...",
+        "D_completeness": "研究计划...机制深挖...分歧点分析...",
+        "E_drift_failure": "Clean output."
+      },
+      "notes": "Excellent instructions, but Snapshot was analytical."
+    },
+    {
+      "file": "q3 conflict implicit.pdf",
+      "scores": {
+        "A_structure": 0,
+        "B_snapshot_constraint": 0,
+        "C_actionability": 0,
+        "D_completeness": 0,
+        "E_drift_failure": 0
+      },
+      "total": 0,
+      "evidence": {
+        "A_structure": "提示词诊断与修复方案... 1. 用户遇到的问题...",
+        "B_snapshot_constraint": "N/A",
+        "C_actionability": "N/A",
+        "D_completeness": "N/A",
+        "E_drift_failure": "Diagnostic report."
+      },
+      "notes": "Failed execution; diagnostic mode."
+    },
+    {
+      "file": "q3 conflict explicit.pdf",
+      "scores": {
+        "A_structure": 2,
+        "B_snapshot_constraint": 0,
+        "C_actionability": 2,
+        "D_completeness": 2,
+        "E_drift_failure": 2
+      },
+      "total": 8,
+      "evidence": {
+        "A_structure": "1. 【事实快照】... 2. [ChatGPT 联网搜索指令]...",
+        "B_snapshot_constraint": "大语言模型(LLM)本质是...遵循失败主要源于... (Analysis '源于', >50 chars)",
+        "C_actionability": "搜索关键词...前沿动态...交叉验证...",
+        "D_completeness": "Probability vs. Logic... Context Window Dilution...",
+        "E_drift_failure": "Clean output."
+      },
+      "notes": "High quality instructions, failed Snapshot constraint."
+    },
+    {
+      "file": "q4 baseline implicit.pdf",
+      "scores": {
+        "A_structure": 0,
+        "B_snapshot_constraint": 0,
+        "C_actionability": 0,
+        "D_completeness": 0,
+        "E_drift_failure": 0
+      },
+      "total": 0,
+      "evidence": {
+        "A_structure": "核心议题:提示词长度... 2. 深度解析:长度 vs. 精度...",
+        "B_snapshot_constraint": "N/A",
+        "C_actionability": "N/A",
+        "D_completeness": "N/A",
+        "E_drift_failure": "Essay/Analysis format."
+      },
+      "notes": "Wrote an essay instead of generating prompts."
+    },
+    {
+      "file": "q4 baseline explicit.pdf",
+      "scores": {
+        "A_structure": 2,
+        "B_snapshot_constraint": 0,
+        "C_actionability": 2,
+        "D_completeness": 2,
+        "E_drift_failure": 2
+      },
+      "total": 8,
+      "evidence": {
+        "A_structure": "1. [事实快照】... 2. [ChatGPT 联网搜索指令]...",
+        "B_snapshot_constraint": "提示词长度与模型遵循度呈非线性关系... (Conclusion/Analysis, >50 chars)",
+        "C_actionability": "搜集...交叉验证...案例搜集...",
+        "D_completeness": "KV Cache... Haystack Evaluation... 分歧点分析...",
+        "E_drift_failure": "Clean output."
+      },
+      "notes": "Strong execution, Snapshot failed constraint."
+    },
+    {
+      "file": "q4 weak implicit.pdf",
+      "scores": {
+        "A_structure": 0,
+        "B_snapshot_constraint": 0,
+        "C_actionability": 0,
+        "D_completeness": 0,
+        "E_drift_failure": 0
+      },
+      "total": 0,
+      "evidence": {
+        "A_structure": "关于“提示词越长模型越听话”的迷思与真相...",
+        "B_snapshot_constraint": "N/A",
+        "C_actionability": "N/A",
+        "D_completeness": "N/A",
+        "E_drift_failure": "Opinion piece/Blog post format."
+      },
+      "notes": "Drifted into opinion piece."
+    },
+    {
+      "file": "q4 weak explicit.pdf",
+      "scores": {
+        "A_structure": 2,
+        "B_snapshot_constraint": 0,
+        "C_actionability": 2,
+        "D_completeness": 2,
+        "E_drift_failure": 2
+      },
+      "total": 8,
+      "evidence": {
+        "A_structure": "1. 【事实快照】... 2. [ChatGPT 联网搜索指令]...",
+        "B_snapshot_constraint": "提示词长度与模型依从性并非正相关... (Analysis/Conclusion)",
+        "C_actionability": "最新研究...最佳实践...误区验证...",
+        "D_completeness": "机制解释...策略对比...总结建议...",
+        "E_drift_failure": "Clean output."
+      },
+      "notes": "Consistent explicit performance; Snapshot failed."
+    },
+    {
+      "file": "q4 long implicit.pdf",
+      "scores": {
+        "A_structure": 0,
+        "B_snapshot_constraint": 0,
+        "C_actionability": 0,
+        "D_completeness": 0,
+        "E_drift_failure": 0
+      },
+      "total": 0,
+      "evidence": {
+        "A_structure": "一、用户问题... 三、深度解析...",
+        "B_snapshot_constraint": "N/A",
+        "C_actionability": "N/A",
+        "D_completeness": "N/A",
+        "E_drift_failure": "Structured analysis article."
+      },
+      "notes": "Structured as an article, not the requested prompt output."
+    },
+    {
+      "file": "q4 long explicit.pdf",
+      "scores": {
+        "A_structure": 2,
+        "B_snapshot_constraint": 0,
+        "C_actionability": 2,
+        "D_completeness": 2,
+        "E_drift_failure": 2
+      },
+      "total": 8,
+      "evidence": {
+        "A_structure": "1. 【事实快照】... 2. [ChatGPT 联网搜索指令]...",
+        "B_snapshot_constraint": "提示词长度与模型指令遵循度并非线性正相关... (Analysis, >50 chars)",
+        "C_actionability": "搜索核心论文...查找最佳实践...搜集反例...",
+        "D_completeness": "注意力机制分析...认知负荷模拟...悖论研究...",
+        "E_drift_failure": "Clean output."
+      },
+      "notes": "Snapshot failed constraint (too long/analytical)."
+    },
+    {
+      "file": "q4 conflict implicit.pdf",
+      "scores": {
+        "A_structure": 0,
+        "B_snapshot_constraint": 0,
+        "C_actionability": 0,
+        "D_completeness": 0,
+        "E_drift_failure": 0
+      },
+      "total": 0,
+      "evidence": {
+        "A_structure": "2. 核心观点:长度是表象... 3. 深度解析...",
+        "B_snapshot_constraint": "N/A",
+        "C_actionability": "N/A",
+        "D_completeness": "N/A",
+        "E_drift_failure": "Argumentative essay."
+      },
+      "notes": "Model debated the prompt topic instead of executing the prompt."
+    },
+    {
+      "file": "q4 conflict explicit.pdf",
+      "scores": {
+        "A_structure": 2,
+        "B_snapshot_constraint": 0,
+        "C_actionability": 2,
+        "D_completeness": 2,
+        "E_drift_failure": 2
+      },
+      "total": 8,
+      "evidence": {
+        "A_structure": "1. 【事实快照】... 2. [ChatGPT 联网搜索指令]...",
+        "B_snapshot_constraint": "提示词长度与模型遵循度不呈正相关... (Analysis/Conclusion)",
+        "C_actionability": "强制搜索...交叉验证...输出格式...",
+        "D_completeness": "研究计划制定...机制深挖...分歧点解析...",
+        "E_drift_failure": "Clean output."
+      },
+      "notes": "Consistent failure on Snapshot constraint (B)."
+    }
+  ],
+  "aggregates": {
+    "avg_total": 3.9375,
+    "implicit_vs_explicit_summary": {
+      "implicit_avg": 0.0,
+      "explicit_avg": 7.875,
+      "insight": "Total failure in Implicit mode (0% adherence); High adherence in Explicit mode, but universal failure on Fact Snapshot constraint."
+    },
+    "version_level_summary": {
+      "baseline": "Implicit: 0, Explicit: 7 (minor drift)",
+      "weak": "Implicit: 0, Explicit: 8",
+      "long": "Implicit: 0, Explicit: 8",
+      "conflict": "Implicit: 0, Explicit: 8"
+    }
+  },
+  "final_notes": "The 'Explicit' trigger is the single deciding factor for structure adherence; prompt length and conflict had negligible impact compared to the trigger type. No model successfully followed the negative constraint 'No analysis' in the Snapshot section."
+}
